@@ -66,5 +66,16 @@ Funcionamento de Client-side e Server-side no NextJS
 
 	O servivor já manda a página pronta pata o navegador, mas mesmo depois que a página chega no navegador, ela continua funcionando
 
+CSR - SSR - SSG
+	CSR = Client-Side Rendering
+		Renderiza no lado do cliente
+
+	SSR = Server-side Rendering
+		Renderia no lado do servidor e manda para o cliente
+
+	SSG = Static-site Generation
+		Na build, ele gera as páginas importantes
+		Na build, gera páginas estáticas das páginas dinâmicas
+
 *Rodar projeto
     $ npm run dev
