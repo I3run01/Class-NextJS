@@ -26,6 +26,45 @@ Rotas
                     @ index.tsx
 
     Rotas dinâmicas.
+	a pasta ou arquivo que tenha a rota dinâmica, tem que estar entre módulo
+		exemplo: [slug]
+		exemplo: [id]
+
+	exemplo de rota dinâmica, sendo dinâmico aquilo que vier depoisdo sobre
+		/sobre/joão
+		/sobre/pedro
+
+		cria a seguinte pasta:
+			# src/pages/[slug]
+
+		Você pode continuar com a rota mesmo depois da rota dinâmica
+			# src/pages/[slug]/mari
+
+		
+		Para pegar a rota dinâmica, você pode usar o useRouter, dentro do arquivo, exemplo:
+			import { useRouter } from "next/router"
+
+			Dentro da função, coloque:
+				const router = useRouter()
+    				const {slug} = router.query
+			
+			Dentro do return, pode usar {slug} para mostrar a variável:
+				return (
+        				<div>
+            					Rota dinâmina e depois Mari e {slug}
+        				</div>
+    				)
+
+Funcionamento de Client-side e Server-side no NextJS
+	- Client-side
+		- lado do cliente
+		- A onde você acessa
+
+	- Server-sive
+		- Lado do servidor
+		- De onde vem a informação
+
+	O servivor já manda a página pronta pata o navegador, mas mesmo depois que a página chega no navegador, ela continua funcionando
 
 *Rodar projeto
     $ npm run dev
