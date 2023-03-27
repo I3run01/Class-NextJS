@@ -5,5 +5,27 @@ Pré requisitos
 Instalação no NextJS
     $ npx create-next-app --typescript
 
+Rotas
+    //As rotas são criadas a partir de páginas, que partem da página src/pages
+
+    1º Crie a pagina "pages" dentro da página "scr"
+
+    Rotas estáticas.
+        Exemplo, rota -> /sobre
+            cria a seguinte pasta:
+                # src/pages/sobre
+
+                Dentro desta pasta, crie o seguinte arquivo
+                    @ index.tsx
+        
+        Exmplo, rota -> /sobre/joao
+            cria a seguinte pasta:
+                # src/pages/sobre/joao
+
+                Dentro desta pasta, crie o seguinte arquivo
+                    @ index.tsx
+
+    Rotas dinâmicas.
+
 *Rodar projeto
     $ npm run dev
