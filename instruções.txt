@@ -1,0 +1,9 @@
+Pré requisitos
+ - Node 12.22 (ou maior)
+ - MacOS, Windows (com ou sem WSL), Linux
+
+Instalação no NextJS
+    $ npx create-next-app --typescript
+
+*Rodar projeto
+    $ npm run dev
