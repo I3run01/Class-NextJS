@@ -21,6 +21,7 @@ const Blog = ({name, posts}: Props) => {
     )
 }
 
+//Vai fazer a requisição no build
 export const getStaticProps = async () => {
     const res = await fetch('https://jsonplaceholder.typicode.com/posts')
     const posts: Post[] = await res.json()
