@@ -77,5 +77,20 @@ CSR - SSR - SSG
 		Na build, ele gera as páginas importantes
 		Na build, gera páginas estáticas das páginas dinâmicas
 
+Layout
+	Layout único, você cria o layout no componente e depois import o layout na página _app.tsx:
+		import Layout from '../components/layout'
+		import '@/styles/globals.css'
+		import type { AppProps } from 'next/app'
+
+		export default function App({ Component, pageProps }: AppProps) {
+			return (
+				<Layout>
+				<Component {...pageProps} />
+				</Layout>
+			)
+		}
+
+
 *Rodar projeto
     $ npm run dev
