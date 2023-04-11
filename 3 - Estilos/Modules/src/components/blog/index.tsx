@@ -1,10 +1,10 @@
-import blogStyled from './blogStyled.module.css'
+import style from './blogStyled.module.css'
 
 export const BlogComponent = () => {
 
     return (
-        <div className={style.style}>
-
+        <div className={style.container} id='container'>
+            <button>red</button>
         </div>
     )
 }
