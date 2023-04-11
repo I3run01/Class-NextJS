@@ -78,18 +78,42 @@ CSR - SSR - SSG
 		Na build, gera páginas estáticas das páginas dinâmicas
 
 Layout
-	Layout único, você cria o layout no componente e depois import o layout na página _app.tsx:
-		import Layout from '../components/layout'
-		import '@/styles/globals.css'
-		import type { AppProps } from 'next/app'
+	Layout único:
+		Você cria o layout no componente e depois import o layout na página _app.tsx:
+			import Layout from '../components/layout'
+			import '@/styles/globals.css'
+			import type { AppProps } from 'next/app'
 
-		export default function App({ Component, pageProps }: AppProps) {
-			return (
-				<Layout>
-				<Component {...pageProps} />
-				</Layout>
-			)
-		}
+			export default function App({ Component, pageProps }: AppProps) {
+				return (
+					<Layout>
+						<Component {...pageProps} />
+					</Layout>
+				)
+			}
+
+	Layout por página:
+		NÂO muda o import:
+			import '@/styles/globals.css'
+			import type { AppProps } from 'next/app'
+
+			export default function App({ Component, pageProps }: AppProps) {
+				return <Component {...pageProps} />
+			}
+		
+		Você importa o Layout nas páginas em que vão ser usadas: ex:
+			import Layout from '../components/layout'
+
+			const mainPage = () => {
+
+				return (
+					<>
+						<h1>Texto da página main</h1>
+					</>
+				)
+			}
+
+export default mainPage
 
 
 *Rodar projeto
