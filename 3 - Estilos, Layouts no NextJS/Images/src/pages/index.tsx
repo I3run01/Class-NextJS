@@ -7,9 +7,11 @@ const mainPage = () => {
         <>
             <h1>Texto da página main</h1>
 
+            <p>Imagem local estática</p>
             <Images
                 src={googleImage}
                 alt=''
+                width={300}
             />
         </>
     )
